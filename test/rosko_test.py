@@ -9,5 +9,11 @@ class TestStringMethods(TestCase):
         respuesta = rosko.respuesta
         self.assertEqual('ejemplo respuesta', respuesta)
 
+    def test_validar_respuesta(self):
+        rosko = RoskoModel()
+        rosko.setRespuesta('arbol');
+        v = rosko.validar()
+        self.assertEqual('OK', v)
+
 if __name__ == '__main__':
     unittest.main()

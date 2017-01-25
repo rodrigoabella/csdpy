@@ -13,7 +13,7 @@ def pregunta():
     valor = request.form['response_a']
     rosko = RoskoModel()
     rosko.setRespuesta(valor);
-    return render_template('index.html', answer=valor, result='OK')
+    return render_template('index.html', answer=valor, result=rosko.validar())
 
 @app.route('/pass', methods=['GET'])
 def getPass():
