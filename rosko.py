@@ -1,5 +1,6 @@
 # define simple flask app
 from flask import Flask,render_template,request
+from model.rosko_model import RoskoModel
 app = Flask(__name__)
 
 
@@ -10,7 +11,9 @@ def hello_world():
 @app.route('/pregunta', methods=['POST'])
 def pregunta():
     valor = request.form['response_a']
-    return render_template('index.html', answer=valor, result='OK')
+    rosko = RoskoModel()
+    rosko.setRespuesta(valor);
+    return render_template('index.html', answer=valor)
 
 
 

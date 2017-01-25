@@ -12,7 +12,6 @@ Scenario: visualizar respuesta
 	And envio la respuesta
 	Then se visualiza la respuesta
 
-
 Scenario: mostrar pregunta A
   Given rosko iniciado
   Then muestra pregunta A
