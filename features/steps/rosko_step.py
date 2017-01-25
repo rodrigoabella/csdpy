@@ -44,3 +44,15 @@ def step_impl(context,resultado):
     assert resultado in browser.html
 
 
+@then(u'se muestra un NOK en pantalla')
+def step_impl(context):
+    assert 'NOK' in browser.html
+
+@when(u'presiono boton pass')
+def step_impl(context):
+    browser.find_by_id('pass_button')[0].click()    
+
+@then(u'se muestra un PASS en pantalla')
+def step_impl(context):
+    assert 'PASS' in browser.html
+
