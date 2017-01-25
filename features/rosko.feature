@@ -23,6 +23,17 @@ Scenario: formular pregunta A
 
 Scenario: mostrar OK para resultado correcto 
   Given rosko iniciado
-  When escribo una respuesta prueba
+  When escribo una respuesta correcta
   And envio la respuesta
   Then se muestra un OK en pantalla  
+
+Scenario: mostrar NOK para resultado incorrecto 
+  Given rosko iniciado
+  When escribo una respuesta incorrecta
+  And envio la respuesta
+  Then se muestra un NOK en pantalla 
+
+Scenario: mostrar PASS para resultado pass 
+  Given rosko iniciado
+  When presiono boton pass
+  Then se muestra un PASS en pantalla  
