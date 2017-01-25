@@ -15,5 +15,11 @@ class TestStringMethods(TestCase):
         v = rosko.validar()
         self.assertEqual('OK', v)
 
+    def test_validar_respuesta_incorrecta(self):
+        rosko = RoskoModel()
+        rosko.setRespuesta('incorrecto');
+        v = rosko.validar()
+        self.assertEqual('NOK', v)
+
 if __name__ == '__main__':
     unittest.main()
