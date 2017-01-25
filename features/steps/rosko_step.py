@@ -11,3 +11,17 @@ def step_impl(context):
 def step_impl(context, mensaje):
     assert mensaje.upper() in browser.html
 
+@when(u'escribo una respuesta')
+def step_impl(context):
+    browser.fill('response_a', 'prueba')
+    
+@when(u'envio la respuesta')
+def step_impl(context):
+    browser.find_by_id('ok_button')[0].click()
+
+
+@then(u'se visualiza la respuesta')
+def step_impl(context):
+    print(browser.html)
+    assert 'prueba' in browser.html
+
