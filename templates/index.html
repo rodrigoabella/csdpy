@@ -13,8 +13,17 @@
 				<input type="submit" name="pass_button" id="pass_button" value="pasapalabra"> <br>
 			</form> 
 		</p>
-  Respuesta: <div style="color:#80BFFF"> {{answer}} </div>
-  Resultado: {{result}}
+  Respuesta: <div style="color:#08088A"> <b>{{answer}}</b> </div>
+{%if result=='OK'%}
+  Resultado: <div style="color:#088A08"> <b>{{result}}</b> </div>
+  {% endif %}
+  {%if result=='NOK'%}
+  Resultado: <div style="color:#DF0101"> <b>{{result}}</b> </div>
+  {% endif %}
+  {%if result=='PASS'%}
+  Resultado: <div style="color:#FFFF00"> <b>{{result}}</b> </div>
+  {% endif %}
+
 	</body>
 
 
