@@ -12,9 +12,9 @@ def step_impl(context, mensaje):
     assert mensaje.upper() in browser.html
 
 
-@when(u'escribo una respuesta')
-def step_impl(context):
-    browser.fill('response_a', 'prueba')
+@when(u'escribo una respuesta {respuesta}')
+def step_impl(context,respuesta):
+    browser.fill('response_a', respuesta)
     
 @when(u'envio la respuesta')
 def step_impl(context):
@@ -37,3 +37,9 @@ def step_impl(context, letra, pregunta):
 @then(u'muestra letra {letra} con pregunta {pregunta}')
 def step_impl(context, letra, pregunta):
 	assert letra.upper()+ '-' + ' ' + pregunta in browser.html
+
+
+@then(u'se muestra un OK en pantalla')
+def step_impl(context):
+    assert 'OK' in browser.html
+
