@@ -10,3 +10,5 @@ class RoskoModel:
 	def validar(self):
 		if (self.respuesta_valida == self.respuesta):
 			return 'OK'
+		else:
+			return 'NOK'

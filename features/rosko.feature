@@ -29,13 +29,6 @@ Scenario: mostrar OK para resultado correcto
   And envio la respuesta
   Then se muestra un OK en pantalla  
 
-Scenario: Cuando la respuesta es incorrecta, no se muestra el resultado 
-  Given rosko iniciado
-  When pregunta A es tiene color marron y hojas verdes
-  And escribo pajaro
-  And envio la respuesta
-  Then se muestra un None en pantalla
-
 Scenario: mostrar NOK para resultado incorrecto 
   Given rosko iniciado
   When escribo una respuesta incorrecta
