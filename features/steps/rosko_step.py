@@ -11,3 +11,14 @@ def step_impl(context):
 def step_impl(context, mensaje):
     assert mensaje.upper() in browser.html
 
+@then(u'muestra pregunta {letra}')
+def step_impl(context, letra):
+	assert letra.upper() + '-' in browser.html
+
+@when(u'pregunta {letra} es {pregunta}')
+def step_impl(context, letra, pregunta):
+    assert letra.upper() + '-' + ' ' + pregunta
+
+@then(u'muestra letra {letra} con pregunta {pregunta}')
+def step_impl(context, letra, pregunta):
+	assert letra.upper()+ '-' + ' ' + pregunta in browser.html
