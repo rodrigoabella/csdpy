@@ -15,6 +15,10 @@ def pregunta():
     rosko.setRespuesta(valor);
     return render_template('index.html', answer=valor, result='OK')
 
+@app.route('/pass', methods=['GET'])
+def getPass():
+    return render_template('index.html', result='PASS')
+
 
 
 if __name__ == "__main__":
