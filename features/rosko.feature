@@ -8,10 +8,9 @@ Scenario: ingreso a la pantalla inicial
 
 Scenario: visualizar respuesta
 	Given rosko iniciado
-  When escribo una respuesta
+	When escribo una respuesta
 	And envio la respuesta
 	Then se visualiza la respuesta
-
 
 Scenario: mostrar pregunta A
   Given rosko iniciado
